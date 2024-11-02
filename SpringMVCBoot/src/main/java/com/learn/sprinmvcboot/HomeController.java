@@ -95,8 +95,16 @@ public class HomeController {
 
 		return "result";
 	}
+
 	@ModelAttribute
 	public void show(Model m) {
 		m.addAttribute("guys", "Aliens");
 	}
+
+//	Feature	            		@ModelAttribute	           		 		  @RequestParam
+//	Binding				Binds to an entire object					Binds to individual parameters
+//	Complexity			Suitable for complex data (objects)			Suitable for simple data (primitives)
+//	Data Types			Supports automatic type conversion			Limited to strings and simple types
+//	Validation			Can use validation annotations				No built-in validation
+//	Use Case			Form submissions with multiple fields		Simple parameter retrieval
 }
